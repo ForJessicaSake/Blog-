@@ -28,7 +28,7 @@ function useFetch(url) {
         setError(err.message)
       })
 return ()=>{ abortfunction.abort();
-  }, [url, abortfunction.signal]);
+  }, [url, abortfunction]);
 
   return (
     { data, isPending, error }
