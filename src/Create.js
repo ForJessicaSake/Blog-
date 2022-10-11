@@ -11,10 +11,10 @@ function Create() {
 
     const handleSubmit =(e)=>{
         e.preventDefault();
-        const blog ={ title, body, author}
+        const blog ={ name:title, email:body, username:author}
         setAdding(true)
 
-        fetch('http://localhost:8000/blogs', {
+        fetch('https://forjessicasake.github.io/users/db.json', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(blog)
@@ -50,20 +50,20 @@ function Create() {
                         onChange={(e) => { setBody(e.target.value) }}
                     />
                 </label>
-                <select className='label'
-                    value={author}
-                    onChange={(e) => { setAuthor(e.target.value) }}>
+//                 <select className='label'
+//                     value={author}
+//                     onChange={(e) => { setAuthor(e.target.value) }}>
 
-                    <option value='Jessica'>
-                        Jessica
-                    </option>
-                    <option value='James'>
-                        James
-                    </option>
-                    <option value='Steph'>
-                        Steph
-                    </option>
-                </select>
+//                     <option value='Jessica'>
+//                         Jessica
+//                     </option>
+//                     <option value='James'>
+//                         James
+//                     </option>
+//                     <option value='Steph'>
+//                         Steph
+//                     </option>
+//                 </select>
 
                 {!adding && <button className='submitbutton'>Add Blog</button>}
                 {adding && <button className='submitbutton'>Adding</button>}
