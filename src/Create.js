@@ -11,7 +11,7 @@ function Create() {
 
     const handleSubmit =(e)=>{
         e.preventDefault();
-        const blog ={ name:title, email:body, username:author}
+        const blog ={ title, body, author}
         setAdding(true)
 
         fetch('https://forjessicasake.github.io/users/db.json', {
