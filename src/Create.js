@@ -50,20 +50,20 @@ function Create() {
                         onChange={(e) => { setBody(e.target.value) }}
                     />
                 </label>
-//                 <select className='label'
-//                     value={author}
-//                     onChange={(e) => { setAuthor(e.target.value) }}>
+                <select className='label'
+                    value={author}
+                    onChange={(e) => { setAuthor(e.target.value) }}>
 
-//                     <option value='Jessica'>
-//                         Jessica
-//                     </option>
-//                     <option value='James'>
-//                         James
-//                     </option>
-//                     <option value='Steph'>
-//                         Steph
-//                     </option>
-//                 </select>
+                    <option value='Jessica'>
+                        Jessica
+                    </option>
+                    <option value='James'>
+                        James
+                    </option>
+                    <option value='Steph'>
+                        Steph
+                    </option>
+                </select>
 
                 {!adding && <button className='submitbutton'>Add Blog</button>}
                 {adding && <button className='submitbutton'>Adding</button>}
