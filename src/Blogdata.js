@@ -8,9 +8,9 @@ function Blogdata({blogs, handleDelete}) {
               {blogs.map((blog) => (
                   <section className="blog-preview" key={blog.id}>
                       <Link to={`/blogs/${blog.id}`} className='link'>
-                      <h2 className='blog-title'>{blog.title}</h2>
-                      <p className='blog-body'>{blog.body}</p>
-                      <h4 className='blog-author'>written by {blog.author}</h4>
+                      <h2 className='blog-title'>{blog.username}</h2>
+                      <p className='blog-body'>{blog.email}</p>
+                      <h4 className='blog-author'>written by {blog.name}</h4>
                       </Link>
                   </section>
               ))}
